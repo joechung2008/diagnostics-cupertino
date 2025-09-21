@@ -1,0 +1,101 @@
+{
+  "version": 2,
+  "buildCommand": "./build.sh",
+  "outputDirectory": "build/web",
+  "routes": [
+    {
+      "src": "/assets/(.*)",
+      "dest": "/assets/$1",
+      "headers": {
+        "X-Content-Type-Options": "nosniff"
+      }
+    },
+    {
+      "src": "/canvaskit/(.*)",
+      "dest": "/canvaskit/$1",
+      "headers": {
+        "X-Content-Type-Options": "nosniff"
+      }
+    },
+    {
+      "src": "/icons/(.*)",
+      "dest": "/icons/$1",
+      "headers": {
+        "X-Content-Type-Options": "nosniff"
+      }
+    },
+    {
+      "src": "/favicon.ico",
+      "dest": "/favicon.ico",
+      "headers": {
+        "X-Content-Type-Options": "nosniff"
+      }
+    },
+    {
+      "src": "/flutter.js",
+      "dest": "/flutter.js",
+      "headers": {
+        "X-Content-Type-Options": "nosniff",
+        "Content-Type": "application/javascript"
+      }
+    },
+    {
+      "src": "/flutter_bootstrap.js",
+      "dest": "/flutter_bootstrap.js",
+      "headers": {
+        "X-Content-Type-Options": "nosniff",
+        "Content-Type": "application/javascript"
+      }
+    },
+    {
+      "src": "/flutter_service_worker.js",
+      "dest": "/flutter_service_worker.js",
+      "headers": {
+        "X-Content-Type-Options": "nosniff",
+        "Content-Type": "application/javascript"
+      }
+    },
+    {
+      "src": "/main.dart.js",
+      "dest": "/main.dart.js",
+      "headers": {
+        "X-Content-Type-Options": "nosniff",
+        "Content-Type": "application/javascript"
+      }
+    },
+    {
+      "src": "/main.dart.js.map",
+      "dest": "/main.dart.js.map",
+      "headers": {
+        "X-Content-Type-Options": "nosniff",
+        "Content-Type": "application/json"
+      }
+    },
+    {
+      "src": "/robots.txt",
+      "dest": "/robots.txt",
+      "headers": {
+        "X-Content-Type-Options": "nosniff",
+        "Content-Type": "text/plain"
+      }
+    },
+    {
+      "src": "/version.json",
+      "dest": "/version.json",
+      "headers": {
+        "X-Content-Type-Options": "nosniff",
+        "Content-Type": "application/json"
+      }
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/index.html",
+      "headers": {
+        "X-Content-Type-Options": "nosniff",
+        "X-Frame-Options": "DENY",
+        "X-XSS-Protection": "1; mode=block",
+        "Cache-Control": "public, max-age=0, must-revalidate"
+      }
+    }
+  ]
+}

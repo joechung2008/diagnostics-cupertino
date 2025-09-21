@@ -1,0 +1,20 @@
+name: diagnostics_cupertino
+description: "A Flutter web application for monitoring and displaying Azure Portal Extension diagnostics across different environments."
+version: 1.0.0+1
+repository: https://github.com/joechung2008/diagnostics-cupertino
+publish_to: "none"
+environment:
+  sdk: ^3.9.2
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.8
+  http: ^1.2.2
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+  mockito: ^5.4.4
+  build_runner: ^2.4.9
+flutter:
+  uses-material-design: false
