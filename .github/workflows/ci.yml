@@ -1,0 +1,48 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test:
+    name: Test (Flutter ${{ matrix.flutter-version }})
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        flutter-version: ["3.35.4"]
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v5
+
+      - name: Set up Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          flutter-version: ${{ matrix.flutter-version }}
+          channel: "stable"
+
+      - name: Verify Flutter installation
+        run: flutter --version
+
+      - name: Verify Dart installation
+        run: dart --version
+
+      - name: Install dependencies
+        run: flutter pub get
+
+      - name: Analyze code
+        run: flutter analyze
+
+      - name: Run tests with coverage
+        run: flutter test --coverage
+
+      - name: Upload coverage artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: coverage-flutter-${{ matrix.flutter-version }}
+          path: coverage
+          if-no-files-found: ignore
