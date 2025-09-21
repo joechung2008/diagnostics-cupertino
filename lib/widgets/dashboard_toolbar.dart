@@ -116,7 +116,7 @@ class DashboardToolbar extends StatelessWidget {
       context: context,
       builder: (context) => Container(
         height: 200,
-        color: CupertinoColors.systemBackground,
+        color: CupertinoTheme.of(context).scaffoldBackgroundColor,
         child: CupertinoPicker(
           itemExtent: 32,
           onSelectedItemChanged: (index) {
