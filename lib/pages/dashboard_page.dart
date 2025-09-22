@@ -107,36 +107,3 @@ class _DashboardPageState extends State<DashboardPage> {
     );
   }
 }
-
-@immutable
-class DashboardState {
-  const DashboardState({
-    this.selectedEnvironment = Environment.public,
-    this.diagnostics,
-    this.isLoading = false,
-    this.error,
-    this.selectedExtension,
-  });
-
-  final Environment selectedEnvironment;
-  final Diagnostics? diagnostics;
-  final bool isLoading;
-  final String? error;
-  final ExtensionInfo? selectedExtension;
-
-  DashboardState copyWith({
-    Environment? selectedEnvironment,
-    Diagnostics? diagnostics,
-    bool? isLoading,
-    String? error,
-    ExtensionInfo? selectedExtension,
-  }) {
-    return DashboardState(
-      selectedEnvironment: selectedEnvironment ?? this.selectedEnvironment,
-      diagnostics: diagnostics ?? this.diagnostics,
-      isLoading: isLoading ?? this.isLoading,
-      error: error ?? this.error,
-      selectedExtension: selectedExtension ?? this.selectedExtension,
-    );
-  }
-}

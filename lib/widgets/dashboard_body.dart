@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import '../models.dart';
 import '../widgets.dart';
-import '../pages/dashboard_page.dart'; // For DashboardState
+// DashboardState is exported from ../models.dart
 
 class DashboardBody extends StatelessWidget {
   final DashboardState state;

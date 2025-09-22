@@ -10,3 +10,4 @@ export 'models/extension.dart';
 export 'models/extension_sync.dart';
 export 'models/server_info.dart';
 export 'models/diagnostics.dart';
+export 'models/dashboard_state.dart';

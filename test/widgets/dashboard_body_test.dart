@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:diagnostics_cupertino/widgets/dashboard_body.dart';
 import 'package:diagnostics_cupertino/models.dart';
-import 'package:diagnostics_cupertino/pages/dashboard_page.dart';
+// No direct import of DashboardPage needed; DashboardState is exported from models.dart
 
 void main() {
   testWidgets('DashboardBody displays tabs correctly', (
