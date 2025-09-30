@@ -1,0 +1,48 @@
+# Flutter/Dart build and dependency files
+build/
+.dart_tool/
+.packages
+.pub-cache/
+.pub/
+
+# IDE and editor files
+.idea/
+.vscode/
+*.iml
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Flutter specific
+.flutter-plugins
+.flutter-plugins-dependencies
+.flutter-versions
+.flutter-plugins
+.flutter-plugins-dependencies
+.flutter-versions
+
+# Android/iOS build folders
+android/.gradle/
+android/app/build/
+ios/Pods/
+ios/Runner.xcworkspace/
+ios/Flutter/Flutter.framework/
+ios/Flutter/Flutter.podspec
+
+# Web build output
+web/build/
+
+# Linux/Mac/Windows build output
+linux/build/
+macos/build/
+windows/build/
+
+# Misc
+*.log
+*.tmp
+*.swp
+*.swo
+
+# Coverage
+coverage/
